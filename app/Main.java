@@ -1,5 +1,7 @@
 public class Main {
   public static void main(String args[]){
-    ArquivoSenha.VerificarExistencia();
+    String rede = args[0];
+    ArquivoSenha.verificarExistencia();
+    ArquivoSenha.verificarSenha(rede);
   }
 }
