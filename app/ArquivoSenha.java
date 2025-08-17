@@ -42,11 +42,11 @@ public class ArquivoSenha {
 
       while((linha = br.readLine()) != null) {
         if (achouRede) {
-          System.out.println(numeroLinha + " : " + linha);
+          System.out.println("Senha"+ " : " + linha);
           break;
         }
         if (linha.equals(rede)){
-          System.out.println(numeroLinha + " : " + linha);
+          System.out.println("Login" + " : " + linha);
           achouRede = true;
         }
         numeroLinha++;
@@ -55,8 +55,7 @@ public class ArquivoSenha {
       if (achouRede == false) {
         ArquivoSenha.escreverNoArquivo("");
         ArquivoSenha.escreverNoArquivo(rede);
-        // SERÁ UM MÉTODO NO FUTURO
-        String gerarSenha = "adfadf14114";
+        String gerarSenha = CriarSenha.criandoSenha();
         ArquivoSenha.escreverNoArquivo(gerarSenha);
         System.out.println("Sua nova senha: " + gerarSenha);
       }
